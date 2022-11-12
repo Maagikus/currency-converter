@@ -1,0 +1,23 @@
+.header{
+background-color: rgb(136, 255, 227);
+}
+.header__container{
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.header__wwrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header__list{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.item-header{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
