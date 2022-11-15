@@ -1,25 +1,11 @@
-import { Component,OnInit } from '@angular/core';
-import { HttpService} from './http.service';
-import  { Curr }  from './currency';
+import { Component, OnInit } from '@angular/core';
+import { HttpService } from './services/currency.service';
+import { ICurrency } from './models/currency';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  providers: [HttpService]
+	selector: 'app-root',
+	templateUrl: './app.component.html',
+	styleUrls: ['./app.component.css'],
+	providers: [HttpService]
 })
-export class AppComponent implements OnInit{
-    curr:  Curr[]=[];
-    constructor(private httpService: HttpService){}
-        
-  ngOnInit(){
-    this.httpService.getData().subscribe({next:(data:any) => {
-      this.curr = data.filter((item:any)=>{
-        if(item.cc==="USD"||item.cc==="EUR"){
-          return item
-        }
-      })
-    }
-    });
-  }
-}
+export class AppComponent { }

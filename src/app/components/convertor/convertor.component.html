@@ -1,0 +1,28 @@
+<section class="convertor">
+	<div class="convertor__container">
+		<div class="convertor__wrapper">
+			<div class="loader" *ngIf="loading">
+				<div class="lds-facebook"><div></div><div></div><div></div></div>
+			</div>
+			<form *ngIf="!loading" [formGroup]="myForm" action="#" class="convertor__form form-converter" (input)="onChange($event)">
+				<div class="form-converter__wrapper">
+					<div class="form-converter__currency">
+						<input formControlName="fromValue" [value]="myForm.value.fromValue" data-type="fromValue" autocomplete="off" type="text" name="form[]"
+							data-error="Ошибка" placeholder="" class="input">
+						<select (change)="changeValues($event)" data-type="currency" formControlName="from" name="form[]" class="form-control">
+							<option [selected]="c.cc === 'USD'" *ngFor="let c of curr;">{{c.cc}}</option>
+						</select>
+					</div>
+					<div class="form-converter__currency">
+						<input formControlName="toValue" [value]="myForm.value.toValue" data-type="toValue" autocomplete="off" type="text" name="form[]"
+							data-error="Ошибка" placeholder="" class="input">
+						<select (change)="changeValues($event)" data-type="currency" formControlName="to" name="form[]" class="form">
+							<option [selected]="c.cc === 'EUR'" *ngFor="let c of curr;">{{c.cc}}</option>
+						</select>
+					</div>
+				</div>
+
+			</form>
+		</div>
+	</div>
+</section>

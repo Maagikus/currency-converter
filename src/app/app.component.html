@@ -1,13 +1,2 @@
-<header class="header">
-  <div class="header__container">
-    <div class="header__wwrapper">
-      <ul class="header__list">
-        <li *ngFor="let c of curr; let i = index" class="header__item item-header">
-          <div class="item-header__currency">{{c.cc}}</div>
-          <div class="item-header__value">{{c.rate}}</div>
-        </li>
-      </ul>
-    </div>
-  </div>
-</header>
+<app-header></app-header>
 <app-converter></app-converter>

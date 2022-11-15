@@ -1,28 +1,44 @@
-.header {
-	position: relative;
-	background-color: rgb(136, 255, 227);
+.convertor {
+	padding: 100px 0px 0px 0px;
 }
-.header__container {
-	max-width: 1400px;
+
+.convertor__container {
+	max-width: 1440px;
 	margin: 0 auto;
 }
-.header__wwrapper {
+
+.convertor__wrapper {
 	display: flex;
-	align-items: center;
 	justify-content: center;
-	height: 60px;
+	align-items: center;
 }
-.header__list {
-	list-style: none;
+
+.convertor__form {
+	padding: 20px 20px 20px 20px;
+	border-radius: 20px;
+	background-color: #d7f998;
+}
+
+.form-converter {
+}
+
+.form-converter__wrapper {
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	gap: 20px;
 }
-.item-header {
+
+.form-converter__currency {
 	display: flex;
-	align-items: center;
-	gap: 20px;
+	gap: 10px;
+}
+
+.input {
+	height: 30px;
+	padding: 0px 0px 0px 10px;
+	border-radius: 5px;
 }
 
 .lds-facebook {
@@ -36,7 +52,7 @@
 	position: absolute;
 	left: 8px;
 	width: 16px;
-	background: #fff;
+	background-color: rgb(136, 255, 227);
 	animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
 }
 .lds-facebook div:nth-child(1) {
@@ -70,7 +86,4 @@
 	align-items: center;
 	justify-content: center;
 	top: -30px;
-}
-.loading-color .lds-facebook div {
-	background-color: red;
 }
